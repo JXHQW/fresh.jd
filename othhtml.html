@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+
+    <div class="goods_item_inner"><a class="goods_item_link" href="//item.jd.com/5910855.html" target="_blank" clstag="channel|keycount|3742|goodsItems5_2_2" title="福成鲜到家  酸汤肥牛 肥牛片 350g 牛肉 牛肉片（带调味料）川菜 方便菜">
+        <img class="goods_item_img" width="150" height="150" src="//img11.360buyimg.com/babel/s300x300_jfs/t25498/210/2687412376/614051/66dd2446/5bed35abNff039f8b.jpg"
+                alt="福成鲜到家  酸汤肥牛 肥牛片 350g 牛肉 牛肉片（带调味料）川菜 方便菜">
+            <p class="goods_item_name">福成鲜到家 酸汤肥牛 肥牛片 350g 牛肉 牛肉片（带调味料）川菜 方便菜</p>
+        </a>
+        <div class="goods_item_row">
+            <p class="goods_item_price">¥29.90</p>
+            <p class="goods_item_good">好评率99%</p>
+        </div>
+    </div>
+
+</body>
+<script>
+    var arrT = [];
+    $(".goods_item_inner").each(function (index, item) {
+        var o = {};
+        o.title = $(item).find(".goods_item_name").html();
+        o.src = $(item).find(".goods_item_img")[0].src;
+        o.sale_price = Number($(item).find(".goods_item_price").html().substr(1));
+        o.active_type = $(item).find(".goods_item_good").html();
+        arrT.push(o);
+    })
+    console.log(arrT);
+
+</script>
+
+</html>

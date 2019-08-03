@@ -32,7 +32,7 @@ $(function () {
                                     </div>
                                 </div>`
             });
-            $(".tab_head ").html(html);
+            $(".fresh_fs_nav_tab .tab_head ").html(html);
         }
     });
     $.ajax({
@@ -64,14 +64,14 @@ $(function () {
                             </div>
                         </div>`
             }).join("");
-            $(".tab_body").html(html);
+            $(".fresh_fs_nav .fresh_fs_nav_tab .tab_body").html(html);
             // 移入移出事件
             $(".tab_head").on("mouseenter", ".tab_head_item", function () {
                 var index = $(this).index();
-                $($(".tab_body_item")[index]).css("display", "block").siblings().css("display", "none");
+                $($(".fresh_fs_nav .fresh_fs_nav_tab .tab_body .tab_body_item")[index]).css("display", "block").siblings().css("display", "none");
             });
             $(".fresh_fs_nav_tab").mouseleave(function () {
-                $(".tab_body_item").css("display", "none");
+                $(".fresh_fs_nav .fresh_fs_nav_tab .tab_body .tab_body_item").css("display", "none");
             });
         }
     });
@@ -162,7 +162,6 @@ $(function () {
         success(text) {
 
             let html = text.map((item, idx) => {
-                console.log(item);    
                 
                 return `<div class="goods_item">
                             <div class="goods_item_pic">
@@ -204,4 +203,147 @@ $(function () {
             $(".fresh_unique_dong .fresh_dong_goods").append(html);
         }
     });
+    // 0元试吃
+    $.ajax({
+        type: "post",
+        url: "./src/tesegouListgengduo.json",
+        dataType: "json",
+        success(text) {
+            let html = text[1].map((item, idx) => {
+                return `<div class="fresh_trial_head">
+                            <h4 class="fresh_trial_head_title icon-fresh_unique_trial_icon">${item.title2}
+                                <p class="fresh_mod_iconfont"><img src="./img/free.png" alt=""></p>
+                            </h4>
+                            <a class="fresh_unique_btn" href="">
+                                ${item.name}
+                                <i>></i>
+                            </a>
+                        </div>
+                        <div class="fresh_trial_goods">
+                            <a class="goods_item" href="">
+                                <div class="goods_item_info">
+                                    <p class="goods_item_name">${item.title}</p>
+                                    <p class="goods_item_data">${item.item1} <em> ${item.item2} </em>${item.item3}</p>
+                                    <p class="goods_item_data">${item.ele1}<em> ${item.ele2} </em>${item.ele3}</p>
+                                    <p class="goods_item_btn">立即报名 ></p>
+                                </div>
+                                <div class="goods_item_pic">
+                                    <img class="goods_item_img" src=${item.src} alt="">
+                                </div>
+                            </a>
+                        </div>`
+            });
+            $(".fresh_unique_trial").append(html);
+        }
+    });
+    // 新品特惠
+    $.ajax({
+        type: "post",
+        url: "./src/tesegouListgengduo.json",
+        dataType: "json",
+        success(text) {
+            let html = text[2].map((item, idx) => {
+                let html2 = item.src.map((item,idx)=>{
+                    return `<div class="goods_item">
+                            <p class="goods_item_tag">新鲜上市</p>
+                            <img class="goods_item_img" src=${item} alt="">
+                        </div>`
+                }).join("");
+                
+                return `
+                            <a class="fresh_new_text" href="#">
+                                <p class="fresh_new_text_name">${item.title}</p>
+                                <p class="fresh_new_text_desc">${item.name}</p>
+                                <p class="fresh_new_text_btn">${item.more} </p>
+                            </a>
+                            <a class="fresh_new_goods goods clear" href="">
+                                ${html2}
+                            </a>
+                       `
+            });
+            $(".fresh_new_body").append(html); 
+        }
+    });
+    // 身临食感 title
+    $.ajax({
+        type: "post",
+        url: "./src/tesegouListgengduo.json",
+        dataType: "json",
+        success(text) {
+            let html = text[3].map((item, idx) => {
+                let html2 = item.title.map((item)=>{
+                    return `<div class="tab_head_item">
+                                    ${item}
+                            </div>`
+                })
+                $(".fresh_slim_body .fresh_slim_tab .tab_head").append(html2);
+            });
+            $(".fresh_slim_body .fresh_slim_tab").append(html);    
+            // 点击效果 + 排他
+             $(".tab_head").on("click",".tab_head_item",function(){
+                $(this).addClass("active").siblings().removeClass("active");
+             })
+        }
+    });
+    // 身临食惠 商品list
+    $.ajax({
+        type: "post",
+        url: "./src/idata3.json",
+        dataType: "json",
+        success(text) {
+            let html = text.map((item,idx)=>{
+                let html2 = item.map((self)=>{
+                    return`<li class="slider_item goods_item">
+                            <div class="goods_item_inner">
+                                <a class="goods_item_link" href="#">
+                                    <img class="goods_item_img" src=${self.src} alt="">
+                                    <p class="goods_item_name">${self.title}</p>
+                                </a>
+                                <div class="goods_item_row">
+                                    <p class="goods_item_price">
+                                            ￥${self.sale_price}
+                                    </p>
+                                <p class="goods_item_good">
+                                    ${self.active_type}
+                                </p>
+                                </div>
+                            </div>
+                        </li>`
+                });
+                return`
+                        <div class="tab_body_item">
+                        <a class="fresh_slim_theme nolink" href="#">
+                            <p class="fresh_slim_theme_title">精美礼品</p>
+                            <p class="fresh_slim_theme_border"></p>
+                            <div class="fresh_slim_theme_desc">啊啊啊啊啊</div>
+                            <img class="fresh_slim_theme_img" src="./img/599e7853N7bbe1ce0.png" alt="">
+                        </a>
+                            <div class="slider fresh_slim_goods">
+                                <div class="slider_list">
+                                    <ul class="slider_wrapper clear">
+                                        ${html2}
+                                    </ul>
+                                </div>
+                            </div>`
+            });
+            $(".tab_body").append(html);
+        }
+    });
+
+    // $.ajax({
+    //     type: "post",
+    //     url: "./src/title.json",
+    //     dataType: "json",
+    //     success(text) {
+    //         let html = text.map((item, idx) => {
+    //             return ` <a class="fresh_slim_theme nolink" href="#">
+    //                         <p class="fresh_slim_theme_title">${item.title2}</p>
+    //                         <p class="fresh_slim_theme_border"></p>
+    //                         <div class="fresh_slim_theme_desc">${item.desc}</div>
+    //                         <img class="fresh_slim_theme_img" src="./img/599e7853N7bbe1ce0.png" alt="">
+    //                     </a>`
+    //         });
+    //         $(".tab_body_item").prepend(html);
+    //     }
+    // });
 });
