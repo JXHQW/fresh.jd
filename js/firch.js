@@ -136,7 +136,7 @@ $(function () {
         return ` <a class="fresh_fs_toutiao_item" href="#">${item}</a>`
     });
     $(".fresh_fs_toutiao_list").html(as);
-
+// 食品安全
     $.ajax({
         type: "post",
         url: "./src/main_bottom.json",
@@ -152,8 +152,56 @@ $(function () {
                         </li>`
             });
             $(".mod_service").append(html);
-
         }
     });
+    // 特色购请求
+    $.ajax({
+        type: "post",
+        url: "./src/tesegouList.json",
+        dataType: "json",
+        success(text) {
 
+            let html = text.map((item, idx) => {
+                console.log(item);    
+                
+                return `<div class="goods_item">
+                            <div class="goods_item_pic">
+                                <img class="goods_item_img" src=${item.src} alt="">
+                            </div>
+                            <div class="goods_item_priceg">
+                                <p class="goods_item_price">${item.price}</p>
+                                <p class="goods_item_g">${item.weight}</p>
+                            </div>
+                            <div class="goods_item_info .clear">
+                                <p class="goods_item_promote">${item.title}</p>
+                                <div class="goods_item_line"></div>
+                                <p class="goods_item_name">${item.name}</p>
+                                <p class="goods_item_desc"></p>
+                            </div>
+                        </div>`
+            }).join("");
+            $(".fresh_top100_goods").html(html);
+        }
+    });
+    // 特色购更多优选List
+    $.ajax({
+        type: "post",
+        url: "./src/tesegouListgengduo.json",
+        dataType: "json",
+        success(text) {
+            let html = text[0].map((item, idx) => {
+                return `<li class="goods_item">
+                            <a class="goods_item_link" href="#">
+                                <img class="goods_item_img" src=${item.src} alt="">
+                                <div class="goods_item_info">
+                                    <p class="goods_item_name">${item.title}</p>
+                                    <p class="goods_item_desc">${item.name}</p>
+                                    <p class="goods_item_seebtn">去看看 > </p>
+                                </div>
+                            </a>
+                        </li>`
+            });
+            $(".fresh_unique_dong .fresh_dong_goods").append(html);
+        }
+    });
 });
