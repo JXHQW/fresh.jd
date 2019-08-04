@@ -99,9 +99,9 @@ $(function () {
                     banner.css({ "left": "0px" });
                     num = 1;
                 }
-                for (let i = 0; i < bannerList.length; i++) {
-                    banner.stop().animate({ left: - width * num }, 200);
-                }
+                // for (let  i = 0; i < bannerList.length; i++) {
+                banner.stop().animate({ left: - width * num }, 200);
+                // }
             };
             // 上一张
             function prevs() {
@@ -136,7 +136,7 @@ $(function () {
         return ` <a class="fresh_fs_toutiao_item" href="#">${item}</a>`
     });
     $(".fresh_fs_toutiao_list").html(as);
-// 食品安全
+    // 食品安全
     $.ajax({
         type: "post",
         url: "./src/main_bottom.json",
@@ -162,7 +162,7 @@ $(function () {
         success(text) {
 
             let html = text.map((item, idx) => {
-                
+
                 return `<div class="goods_item">
                             <div class="goods_item_pic">
                                 <img class="goods_item_img" src=${item.src} alt="">
@@ -243,13 +243,13 @@ $(function () {
         dataType: "json",
         success(text) {
             let html = text[2].map((item, idx) => {
-                let html2 = item.src.map((item,idx)=>{
+                let html2 = item.src.map((item, idx) => {
                     return `<div class="goods_item">
                             <p class="goods_item_tag">新鲜上市</p>
                             <img class="goods_item_img" src=${item} alt="">
                         </div>`
                 }).join("");
-                
+
                 return `
                             <a class="fresh_new_text" href="#">
                                 <p class="fresh_new_text_name">${item.title}</p>
@@ -261,7 +261,7 @@ $(function () {
                             </a>
                        `
             });
-            $(".fresh_new_body").append(html); 
+            $(".fresh_new_body").append(html);
         }
     });
     // 身临食感 title
@@ -271,18 +271,18 @@ $(function () {
         dataType: "json",
         success(text) {
             let html = text[3].map((item, idx) => {
-                let html2 = item.title.map((item)=>{
+                let html2 = item.title.map((item) => {
                     return `<div class="tab_head_item">
                                     ${item}
                             </div>`
                 })
                 $(".fresh_slim_body .fresh_slim_tab .tab_head").append(html2);
             });
-            $(".fresh_slim_body .fresh_slim_tab").append(html);    
+            $(".fresh_slim_body .fresh_slim_tab").append(html);
             // 点击效果 + 排他
-             $(".tab_head").on("click",".tab_head_item",function(){
+            $(".tab_head").on("click", ".tab_head_item", function () {
                 $(this).addClass("active").siblings().removeClass("active");
-             })
+            })
         }
     });
     // 身临食惠 商品list
@@ -291,9 +291,9 @@ $(function () {
         url: "./src/idata3.json",
         dataType: "json",
         success(text) {
-            let html = text.map((item,idx)=>{
-                let html2 = item.map((self)=>{
-                    return`<li class="slider_item goods_item">
+            let html = text.map((item, idx) => {
+                let html2 = item.map((self) => {
+                    return `<li class="slider_item goods_item">
                             <div class="goods_item_inner">
                                 <a class="goods_item_link" href="#">
                                     <img class="goods_item_img" src=${self.src} alt="">
@@ -309,16 +309,18 @@ $(function () {
                                 </div>
                             </div>
                         </li>`
-                });
-                return`
-                        <div class="tab_body_item">
+                }).join("");
+                return `
+                        <div class="tab_body_item" >
                         <a class="fresh_slim_theme nolink" href="#">
                             <p class="fresh_slim_theme_title">精美礼品</p>
                             <p class="fresh_slim_theme_border"></p>
-                            <div class="fresh_slim_theme_desc">啊啊啊啊啊</div>
+                            <div class="fresh_slim_theme_desc">送礼送健康 精选生鲜礼盒</div>
                             <img class="fresh_slim_theme_img" src="./img/599e7853N7bbe1ce0.png" alt="">
                         </a>
                             <div class="slider fresh_slim_goods">
+                            <button class="slider_control slider_control_prev ">&lt;</button>
+                            <button class="slider_control slider_control_next ">&gt;</button>
                                 <div class="slider_list">
                                     <ul class="slider_wrapper clear">
                                         ${html2}
@@ -326,24 +328,122 @@ $(function () {
                                 </div>
                             </div>`
             });
+            // 插入
             $(".tab_body").append(html);
+            // 隐藏
+            $(".fresh_slim_body .tab_body .tab_body_item").css("display", "none");
+            $($(".fresh_slim_body .tab_body .tab_body_item")[0]).css("display", "block");
+            $("#fresh_slim_5 .tab_head_item").click(function(){
+                let index = $(this).index();
+                $($(".fresh_slim_body .tab_body .tab_body_item")[index]).css("display", "block").siblings().css("display","none");
+            })
+            
+            let len = $("#fresh_slim_5 .tab_body_item .slider_list .slider_item").length / 4 /4
+            let num = 0;
+            // 每个li宽度
+            let width = $(".slider_wrapper .slider_item").width() * 4;
+            // ul
+            let slider_wrapper = $(".fresh_slim_body .slider_list .slider_wrapper");
+            // 上一张
+            function prevs() {
+                num--
+                if (num < 0 ) {
+                    num = len -1
+                    slider_wrapper.css({ 'left': -((len - 1) * width) + "px" });
+                    // slider_wrapper.stop().animate({left : - (width * num)})
+                    num = len-2
+                }
+                slider_wrapper.stop().animate({left:-((width)*num)},200)
+            };
+
+
+            // 下一张
+            function next() {
+                num++
+                if(num >= len)
+                {
+                    console.log(num,len);
+                    slider_wrapper.stop().animate({ left:-width * num }, 500);
+                    slider_wrapper.css("left","0px");
+                    num=1;
+                }
+                slider_wrapper.stop().animate({ left: - width * num }, 500);
+            };
+            
+            $("#fresh_slim_5 .slider_control_next").click(function () {
+                next();
+            });
+            $("#fresh_slim_5 .slider_control_prev").click(function () {
+                prevs();
+            });
+           
         }
     });
 
-    // $.ajax({
-    //     type: "post",
-    //     url: "./src/title.json",
-    //     dataType: "json",
-    //     success(text) {
-    //         let html = text.map((item, idx) => {
-    //             return ` <a class="fresh_slim_theme nolink" href="#">
-    //                         <p class="fresh_slim_theme_title">${item.title2}</p>
-    //                         <p class="fresh_slim_theme_border"></p>
-    //                         <div class="fresh_slim_theme_desc">${item.desc}</div>
-    //                         <img class="fresh_slim_theme_img" src="./img/599e7853N7bbe1ce0.png" alt="">
-    //                     </a>`
-    //         });
-    //         $(".tab_body_item").prepend(html);
-    //     }
-    // });
+
+
+
+    $.ajax({
+        type: "post",
+        url: "./src/京东生鲜.json",
+        dataType: "json",
+        success(text) {
+            let html = text.map((item, idx) => {
+                let html2 = item[1].map((ele,idx)=>{
+                    return`<a class="brands_item first" href="#">
+                                <img class="brands_item_img" src=${ele.srcmin} alt="">
+                            </a>`
+                }).join("");
+                let html3 = item[0].map((self,idx)=>{
+                    return `<div class="goods_item">
+                                <a class="goods_item_link" href="#">
+                                    <img class="goods_item_img" src=${self.src} alt="">
+                                    <p class="goods_item_name">${self.title}</p>
+                                </a>
+                                <p class="goods_item_price">¥${self.sale_price}</p>
+                            </div>`
+                }).join("");
+                let html4 = item[2].map((sin,idx)=>{
+                    let html5 = sin.item.map((sin2,idx)=>{
+                        return `<a href="#" class="fresh_category_keys_item">${sin2}</a>`
+                    }).join("");
+                    return `
+                    <div class="fresh_category_act1">
+                            <h4 class="fresh_category_title">${sin.title}</h4>
+                            <p class="fresh_category_subtitle">${sin.subtitle}</p>
+                            <div class="fresh_category_keys clearfix">
+                               ${html5}
+                            </div>
+                            <div class="fresh_category_more">
+                                ${sin.more}
+                            </div>
+                        </div>`
+                }).join("");
+                
+                 let html6 = item[3].map((der,idx)=>{
+                    return `<div class="fresh_category_act2">
+                             <img class="fresh_category_act2_img" src=${der.src} alt="">
+                            </div>
+                            <div class="fresh_category_act3">
+                              <img class="fresh_category_act3_img" src=${der.src2} alt="" srcset="">
+                            </div>`
+                }).join("");
+                return ` <div class="J_floor fresh_category grid_c1 clearfix fresh_category_6">
+                <div class="fresh_category_body">
+                    <div class="fresh_category_acts clearfix">
+                        ${html4}
+                        ${html6}
+                    </div>
+                    <div class="fresh_category_goods goods">
+                        ${html3}
+                    </div>
+                    <div class="fresh_category_brands brands clear">
+                       ${html2}
+                    </div>
+                </div>
+            </div>`
+            });
+            $(".fresh_category_body").append(html);
+        }
+    });
 });
