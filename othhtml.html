@@ -10,39 +10,23 @@
 </head>
 
 <body>
-    <div class="goods_item_inner">
-        <a class="goods_item_link" href="//item.jd.com/10059773273.html" target="_blank"
-            >
-            <img
-                class="goods_item_img" width="120" height="120" data-lazy-img="done"
-                src="//img10.360buyimg.com/cms/s240x240_jfs/t2197/25/2671772043/642745/25b5be6b/5716fef6Nf8f1a1a2.jpg!q80.webp"
-                alt="希菲家庭牛排套餐10片腌制牛肉1500g菲力*4片西冷*4片香菇牛排*2 生鲜牛肉西餐"></a>
-        <div class="goods_item_person">
-            <img class="goods_item_person_avator" width="50" height="50" data-lazy-img="done"
-                src="//storage.360buyimg.com/i.imageUpload/33333430332d343831343138323331353536303937353634333238_sma.jpg"
-                alt="">
-            <p class="goods_item_person_name">无花有叶</p>
-        </div>
-        <div class="goods_item_comment">
-            <div class="fresh_mod_iconfont goods_item_comment_star icon-fresh_comments_stars"><i
-                    class="green star1 icon-fresh_comments_stars"></i></div>
-            <p class="goods_item_comment_text">
-                一开始我还是很期待的，使用顺丰快递感觉也不错，同时我在京东自营店也购买另外一个品牌牛排，差不多同时，送货距离也差不多。京东快递很OK第二天到了，保鲜效果也很好。顺丰这老哥厉害，苏州发货，到上海，然后无锡，最后到淮安，我服气啊。生鲜到手冰块全融化，牛排全部变水了，已经不能二次冰冻了。里面的酱料还破损。这是我在京东购买最坏的体验了。
-            </p>
-            <p class="goods_item_comment_time">2019-08-04 21:10:30</p>
-        </div>
+    <div class="goods_item"><a class="goods_item_link" href="//item.jd.com/6405711.html" target="_blank"
+            clstag="channel|keycount|3742|goodsItems6_1"><img class="goods_item_img" width="150" height="150"
+                data-lazy-img="done"
+                src="//img10.360buyimg.com/babel/s300x300_jfs/t18877/40/319533497/486134/171c1d37/5a6aa298N0dd3473a.jpg!q80.webp"
+                alt="越南进口白心火龙果4个装 标准果 单果400-550g 新鲜水果" title="越南进口白心火龙果4个装 标准果 单果400-550g 新鲜水果">
+            <p class="goods_item_name">越南进口白心火龙果4个装 标准果 单果400-550g 新鲜水果</p>
+        </a>
+        <p class="goods_item_price">¥31.80</p>
     </div>
 </body>
 <script>
-    var arr3 = [];
-    $(" .brands_item").each(function (index, item) {
+    var arr4 = [];
+    $(".fresh_category").each(function (index, item) {
         var o = {};
-        o.name = $(item).find(".goods_item_person_name").html();
-        o.title = $(item).find(".goods_item_comment_text").html();
-        o.time = $(item).find(".goods_item_comment_time").html();
-        o.src = $(item).find(" .goods_item_img")[0].src;
-        o.src2 = $(item).find(" .goods_item_person_avator")[0].src;
-        arr3.push(o);
+        o.src = $(item).find(" .fresh_category_act2_img")[0].src;
+        o.src2 = $(item).find(" .fresh_category_act3_img")[0].src;
+        arr4.push(o);
     })
 </script>
 

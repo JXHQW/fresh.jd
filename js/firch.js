@@ -382,18 +382,17 @@ $(function () {
 
 
 
-
+// **********
     $.ajax({
         type: "post",
-        url: "./src/京东生鲜.json",
+        url: "./src/SSW.json",
         dataType: "json",
         success(text) {
-            let html = text.map((item, idx) => {
-                let html2 = item[1].map((ele,idx)=>{
-                    return`<a class="brands_item first" href="#">
-                                <img class="brands_item_img" src=${ele.srcmin} alt="">
-                            </a>`
-                }).join("");
+            console.log(text);
+            
+            let html = text.map((item,idx)=>{
+
+                // 商品列表
                 let html3 = item[0].map((self,idx)=>{
                     return `<div class="goods_item">
                                 <a class="goods_item_link" href="#">
@@ -403,6 +402,17 @@ $(function () {
                                 <p class="goods_item_price">¥${self.sale_price}</p>
                             </div>`
                 }).join("");
+
+
+                // 底部小图标
+                let html2 = item[1].map((ele,idx)=>{
+                    return`<a class="brands_item first" href="#">
+                                <img class="brands_item_img" src=${ele.srcmin} alt="">
+                            </a>`
+                }).join("");
+               
+
+                // 车厘子
                 let html4 = item[2].map((sin,idx)=>{
                     let html5 = sin.item.map((sin2,idx)=>{
                         return `<a href="#" class="fresh_category_keys_item">${sin2}</a>`
@@ -419,7 +429,7 @@ $(function () {
                             </div>
                         </div>`
                 }).join("");
-                
+                    // 大图
                  let html6 = item[3].map((der,idx)=>{
                     return `<div class="fresh_category_act2">
                              <img class="fresh_category_act2_img" src=${der.src} alt="">
@@ -428,22 +438,58 @@ $(function () {
                               <img class="fresh_category_act3_img" src=${der.src2} alt="" srcset="">
                             </div>`
                 }).join("");
-                return ` <div class="J_floor fresh_category grid_c1 clearfix fresh_category_6">
-                <div class="fresh_category_body">
-                    <div class="fresh_category_acts clearfix">
-                        ${html4}
-                        ${html6}
-                    </div>
-                    <div class="fresh_category_goods goods">
-                        ${html3}
-                    </div>
-                    <div class="fresh_category_brands brands clear">
-                       ${html2}
-                    </div>
-                </div>
-            </div>`
+                return `
+                 <div class="J_floor fresh_category grid_c1 clearfix fresh_category_6">
+                        <div class="fresh_category_body">
+                            <div class="fresh_category_acts clearfix">
+                                ${html4}
+                                ${html6}
+                            </div>
+                            <div class="fresh_category_goods goods">
+                                ${html3}
+                            </div>
+                            <div class="fresh_category_brands brands clear">
+                            ${html2}
+                            </div>
+                        </div>
+                    </div>`
             });
             $(".fresh_category_body").append(html);
         }
     });
+      // 新品特惠
+      $.ajax({
+        type: "post",
+        url: "./src/京东生鲜.json",
+        dataType: "json",
+        success(text) {
+            let html = text.map((item,idx)=>{
+                return `<li class="slider_wrapper2_list">
+                            <div class="slider_wrapper2_list_item">
+                                <a href="#" class="slider_wrapper2_list_portrait">
+                                    <img class="slider_wrapper2_portrait_img" src=${item.src2} alt="">
+                                    <p class="goods_item_person_name">${item.name}</p>
+                                </a>
+                                <div class="slider_wrapper2_list_inner">
+                                    <img class="slider_wrapper2_list_img"
+                                        src=${item.src} alt="">
+                                </div>
+                                <div class="slider_wrapper2_list_comment">
+                                    <div class="slider_wrapper2_list_comment_child">
+                                        <img class="slider_wrapper2_list_comment_img" src="./img/五星好评.png"
+                                            alt="">
+                                    </div>
+                                    <p class="slider_wrapper2_list_text">
+                                        ${item.title}
+                                    </p>
+                                    <p class="slider_wrapper2_list_time">
+                                        ${item.time}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>`
+            });
+        }
+    });
+    
 });

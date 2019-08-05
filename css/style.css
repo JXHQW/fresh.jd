@@ -1724,6 +1724,7 @@
 }
 .grid_c1, .grid_md6 {
     margin:  auto;
+    margin-bottom:30px; 
     /* width: 1190px; */
 }
 .slider{
@@ -1735,21 +1736,81 @@
 }
 
 .slider_wrapper2{
-width: 9520px;
+    margin-top: 30px;
+    width: 9520px;
 }
 .slider_wrapper2_list{
     width:396.667px;
-    /* margin-right: 46px; */
+    padding-top: 26px;
     height: 230px;
-    border:1px solid #000;
+    /* background: #f7f7fb; */
     float: left;
 }
 .slider_wrapper2_list_portrait{
     width: 58px;
     height: 58px;
-    border: 1px solid #
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 44%;
 }
-.slider_wrapper2_list_portrait img{
+.slider_wrapper2_list_portrait .slider_wrapper2_portrait_img{
     width: 58px;
     height: 58px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.slider_wrapper2_list_portrait .goods_item_person_name{
+    font-size: 14px;
+    color: #000;
+}
+.slider_wrapper2_list_inner{
+    float: left;
+    margin-right: 46px;
+    width: 120px;
+    height: 120px;
+}
+.slider_wrapper2_list_inner .slider_wrapper2_list_img{
+    width: 100%;
+    height: 100%;
+}
+.slider_wrapper2_list .slider_wrapper2_list_comment{
+    float: left;
+    width: 200px;
+    height: 120px;
+    /* overflow: hidden; */
+    padding-top: 10px;
+}
+.slider_wrapper2_list_comment_img{
+    width: 72px;
+    height: 11px;
+
+   
+}
+.slider_wrapper2_list_text{
+    width: 200px;
+    word-break: break-all;
+    color: #232321;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    margin-bottom: 30px;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+    overflow: hidden;  /** 隐藏超出的内容 **/
+}
+.white{
+    margin-bottom: 30px;
+}
+.slider_wrapper2_list_item{
+    position: relative;
+    width: 383px;
+    height: 200px;
+    float: left;
+    background: #f7f7fb;
+    padding-top: 50px;
+}
+
+.slider_wrapper2_list_time{
+    color: #909090;
 }

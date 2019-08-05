@@ -1,0 +1,60 @@
+[[
+    [
+        {
+            "title": "新鲜水果",
+            "subtitle": "应时而采，新鲜特供",
+            "item": [
+                "车厘子",
+                "猕猴桃",
+                "进口水果",
+                "橙子",
+                "芒果",
+                "苹果"
+            ],
+            "more": "更多水果"
+        }
+    ],
+    [
+        {
+            "title": "海鲜水产",
+            "subtitle": "新鲜海货，即时享受",
+            "item": [
+                "小龙虾",
+                "虾类",
+                "软足类",
+                "活鲜",
+                "海参",
+                "扇贝"
+            ],
+            "more": "更多海鲜"
+        }
+    ],
+    {
+        "title": "海鲜肉禽蛋品水产",
+        "subtitle": "肉香四溢，大快朵颐",
+        "item": [
+            "猪肉",
+            "鸡翅",
+            "熟食",
+            "牛排",
+            "羊肉",
+            "冷鲜肉"
+        ],
+        "more": "更多肉类"
+    }
+]
+,
+[
+    {
+        "src": "https://m.360buyimg.com/babel/jfs/t1/44521/27/7215/76843/5d431085E62b5de35/e27d1cc24975a63d.jpg",
+        "src2": "https://img10.360buyimg.com/babel/jfs/t7600/257/2078524839/112023/d77a3fe4/59a7c28eN40fe6c93.png!q80.webp"
+    },
+    {
+        "src": "https://m.360buyimg.com/babel/jfs/t1/65516/12/6054/69396/5d43f5d3E9db7a5ca/ab9d050c76b20ec0.jpg",
+        "src2": "https://m.360buyimg.com/babel/jfs/t1/79583/40/5968/153384/5d40f35cEe68dae20/a4c195dce66bc366.png"
+    },
+    {
+        "src": "https://m.360buyimg.com/babel/jfs/t1/62400/35/5760/138094/5d3ec59eE925da154/5c6ae79261f94b26.jpg",
+        "src2": "https://m.360buyimg.com/babel/jfs/t1/79088/22/5847/137900/5d3ec54eEf9c5e482/179a7844a4f21a31.png"
+    }
+]]
