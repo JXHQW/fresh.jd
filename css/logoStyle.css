@@ -1,0 +1,253 @@
+#header{
+    height: 110px;
+    background: url(../img/headbg.jpg) repeat-x left bottom;
+}
+.header{
+    width: 1210px;
+    margin: auto;
+}
+.headerLogo{
+    width: 160px;
+    height: 50px;
+    float: left;
+    margin-top: 24px;
+    background: url(../img/icon.png) no-repeat;
+}
+.headerLogotitle{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 34px;
+}
+#header .have-account{
+    font-size: 16px;
+    float: right;
+    margin-top: 55px;
+    color: #999;
+    font-size: 16px;
+}
+#header .have-account a{
+    color: red;
+}
+/* header end */
+.root61 .w {
+    width: 1210px;
+}
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+.progress-bar {
+    position: relative;
+    margin: 80px auto 0;
+    width: 400px;
+}
+
+.progress-bar .pro-step {
+    float: left;
+    text-align: center;
+}
+.progress-bar .cur-step .step-index {
+    background-position: 0 -200px;
+    color: #fff;
+}
+
+.progress-bar .pro-step .step-index {
+    margin: 0 auto;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background-position: -45px -200px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ccc;
+}
+.progress-bar .cur-step .step-desc {
+    color: #3b4;
+}
+.progress-bar .pro-step .step-desc {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.progress-bar .person-pro-step3 {
+    margin-left: 112px;
+}
+.progress-bar .person-pro-step2 {
+    margin-left: 106px;
+}
+
+.progress-bar .person-pro-line {
+    width: 124px;
+    background-position: 0 -100px;
+}
+
+.clear::after {
+    content: " ";
+    height: 0;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+}
+
+.main {
+    margin: 50px auto 186px;
+    width: 400px;
+    /* display:none; */
+}
+.iphoneText{
+    position: relative;
+    width: 398px;
+    height: 52px;
+    border: 1px solid #ddd;
+}
+.iphoneText:hover{
+    border: 1px solid #000;
+}
+.green{
+    display: none;
+    float: left;
+    color: #3b4; 
+    font-size: 12px;
+    position: absolute;
+    left: 20px;
+    bottom: -25px;
+}
+.red{
+    display: none;
+    float: left;
+    color: red; 
+    font-size: 12px;
+    position: absolute;
+    left: 20px;
+    bottom: -25px;
+}
+
+
+.iphoneText:hover .iphoneCountry{
+    border-right: 1px solid #000;
+}
+.iphoneCountry{
+    height: 52px;
+    border-right: 1px  solid #ddd;
+    width: 108px;
+    padding: 0 0 0 20px;
+    float: left;
+    font-size: 16px;
+    line-height: 52px;
+    cursor: pointer;
+}
+.iphone2{
+    float: left;
+    font-size: 14px;
+    /* border: 1px solid #000; */
+    padding-left: 10px;
+    height: 50px;
+    width: 288px;
+}
+.iphoneBtn{
+    cursor: pointer;
+    margin-top: 30px;
+    width: 398px;
+    height: 52px;
+    border: 1px solid #ddd;
+}
+.iphoneBtn:hover{
+    border: 1px solid #000;
+}
+.nextBtn{
+    margin-top: 30px;
+    width: 398px;
+    height: 52px;
+    background: #e2231a;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.nextBtn:hover{
+    background: #c81623;
+}
+.codeText{
+    display: none;
+    margin-top: 30px;
+    width: 398px;
+    height: 52px;
+    border: 1px solid #ddd;
+}
+.codeTextLeft{
+    width: 107px;
+    height: 50px;
+    padding-left: 20px;
+    float: left;
+    line-height: 50px;
+    font-size: 14px;
+    color: #666;
+}
+.codeTextword{
+    width: 173px;
+    height: 50px;
+    float: left;
+    color: rgb(211, 202, 202);
+    padding-left: 15px;
+    border-right: 1px solid #ddd;
+}
+.receive{
+    cursor: pointer;
+    float: left;
+    width: 115px;
+    height: 50px;
+}
+.receive:hover{
+    border: 1px solid #000;
+}
+/* 用户名邮箱 */
+.main2 {
+    margin: 50px auto 186px;
+    width: 400px;
+    display:none;
+}
+.oBox{
+    width: 400px;
+    height: 54px;
+    border: 1px solid rgb(153, 153, 153);
+    margin-bottom: 30px;
+    position: relative;
+}
+.oBoxdiv{
+    font-size: 16px;
+    width: 107px;
+    height: 50px;
+    float: left;
+    padding-left: 20px;
+    line-height: 50px;
+}
+.oBoxtext{
+    width: 211px;
+    height: 46px;
+    float: left;
+    padding-left: 10px;
+}
+.oBtn{
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #e2231a;
+}
+.oBtn:hover {
+    background: #c81623;
+}
+.def{
+    position: absolute;
+    bottom: -23px;
+    left: 18px;
+    display: none;
+}
+.gen{
+    color: green;
+}
+.red2{
+    color: red;
+}
