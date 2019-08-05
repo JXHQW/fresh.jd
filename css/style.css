@@ -294,7 +294,7 @@
      color: #00c65d;
  }
  
- .fresh_fs_menu_news {
+ .fresh .fresh_fs_menu .fresh_fs_menu_news {
      display: block;
      position: absolute;
      right: 20px;
@@ -562,7 +562,6 @@
      width: 800px;
      height: 400px;
      overflow: hidden;
-     border: 1px solid #000;
  }
  
  .banner {
@@ -1184,7 +1183,7 @@
      margin-bottom: 15px;
  }
  
- .fresh_mod_iconfont {
+ .fresh_unique_trial .fresh_mod_iconfont {
      position: absolute;
      left: 72px;
      top: 0px;
@@ -1722,7 +1721,10 @@
 .fresh_comments_inner {
     padding-top: 60px;
 }
-.grid_c1, .grid_md6 {
+.fresh_category_6{
+    margin-bottom:30px;
+}
+.fresh_category_body .grid_c1, .grid_md6 {
     margin:  auto;
     margin-bottom:30px; 
     /* width: 1190px; */
@@ -1740,7 +1742,7 @@
     width: 9520px;
 }
 .slider_wrapper2_list{
-    width:396.667px;
+    width:397.667px;
     padding-top: 26px;
     height: 230px;
     /* background: #f7f7fb; */
@@ -1763,6 +1765,8 @@
 .slider_wrapper2_list_portrait .goods_item_person_name{
     font-size: 14px;
     color: #000;
+    height: 22px;
+    overflow: hidden;
 }
 .slider_wrapper2_list_inner{
     float: left;
@@ -1813,4 +1817,60 @@
 
 .slider_wrapper2_list_time{
     color: #909090;
+}
+#mod_footer{
+    height: 480px;
+    background: #00c65d
+}
+.mod_service{
+    padding: 50px 0 40px;
+    width: 1190px;
+    margin: auto;
+    border-bottom:1px solid rgba(34,34,34,.2);
+}
+#mod_footer .mod_service .mod_service_title{
+    font-size: 18px;
+    color: #fff;
+}
+#mod_footer .mod_service .mod_service_desc{
+    color: #fff;
+    /* font-size: 18px; */
+}
+.mod_footer_main{
+    padding-top: 40px;
+}
+.footer_main_img1{
+    margin-right: 30px;
+    float: left;
+}
+.footer_main_img{
+    float: left;
+}
+.mod_footer_guide{
+    float: left;
+    margin-left: 100px;
+}
+.mod_footer_list{
+
+}
+.mod_footer_list_item{
+    width: 195px;
+    height: 119px;
+    float: left;
+    /* margin-right: 100px; */
+}
+.mod_footer_list_item_title{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+.mod_footer_list_body_item{
+    display: block;
+    font-size: 14px;
+    color: hsla(0,0%,100%,.5);
+    margin: 0 0 3px;
+    cursor: pointer;
+}
+.mod_footer_list_body_item:hover{
+    color: #fff;
 }

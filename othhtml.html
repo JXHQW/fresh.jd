@@ -10,23 +10,23 @@
 </head>
 
 <body>
-    <div class="goods_item"><a class="goods_item_link" href="//item.jd.com/6405711.html" target="_blank"
-            clstag="channel|keycount|3742|goodsItems6_1"><img class="goods_item_img" width="150" height="150"
-                data-lazy-img="done"
-                src="//img10.360buyimg.com/babel/s300x300_jfs/t18877/40/319533497/486134/171c1d37/5a6aa298N0dd3473a.jpg!q80.webp"
-                alt="越南进口白心火龙果4个装 标准果 单果400-550g 新鲜水果" title="越南进口白心火龙果4个装 标准果 单果400-550g 新鲜水果">
-            <p class="goods_item_name">越南进口白心火龙果4个装 标准果 单果400-550g 新鲜水果</p>
-        </a>
-        <p class="goods_item_price">¥31.80</p>
-    </div>
+    <li class="item">
+        <div class="item_title">购物指南</div>
+        <div class="item_body"><a class="item_body_item " href="//help.jd.com/user/issue/list-29.html" target="_blank"
+                clstag="channel|keycount|fresh|modFootGuideItems_1_1">购物流程</a><a class="item_body_item "
+                href="//help.jd.com/user/issue/231-258.html" target="_blank"
+                clstag="channel|keycount|fresh|modFootGuideItems_1_2">支付方式</a><a class="item_body_item "
+                href="//help.jd.com/user/issue/325-931.html" target="_blank"
+                clstag="channel|keycount|fresh|modFootGuideItems_1_3">售后规则</a></div>
+    </li>
 </body>
 <script>
-    var arr4 = [];
-    $(".fresh_category").each(function (index, item) {
+    var arr6= [];
+    $(".item").each(function (index, item) {
         var o = {};
-        o.src = $(item).find(" .fresh_category_act2_img")[0].src;
-        o.src2 = $(item).find(" .fresh_category_act3_img")[0].src;
-        arr4.push(o);
+        o.title = $(item).find(" .item_title").html();
+        o.text = $(item).find(" .item_body_item").text();
+        arr6.push(o);
     })
 </script>
 

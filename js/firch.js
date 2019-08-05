@@ -388,7 +388,6 @@ $(function () {
         url: "./src/SSW.json",
         dataType: "json",
         success(text) {
-            console.log(text);
             
             let html = text.map((item,idx)=>{
 
@@ -489,7 +488,43 @@ $(function () {
                             </div>
                         </li>`
             });
+            $(".slider_wrapper2").append(html);
+            let oUl = $(".slider_wrapper2");
+            let width = $(".slider_wrapper2 .slider_wrapper2_list").width();
         }
     });
-    
+
+    // $.ajax({
+    //     type: "post",
+    //     url: "./src/fonterList.json",
+    //     dataType: "json",
+    //     success(text) {
+           
+    //     console.log("何启维");
+        
+    //     }
+    // });
+
+    $.ajax({
+        type: "post",
+        url: "./src/aa666.json",
+        dataType: "json",
+        success(text) {
+            let html = text.map((item)=>{
+                let html2 = item.text.map((ele)=>{
+                 return` <a class="mod_footer_list_body_item" href="">${ele}</a>`
+                }).join("");
+                return `<li class="mod_footer_list_item">
+                             <p class="mod_footer_list_item_title">${item.title}</p>
+                             <div class="mod_footer_list_body">
+                                 ${html2}
+                             </div>
+                         </li>`
+            })
+            console.log(77777,html);
+            
+            $("#mod_footer .mod_footer_list").append(html);
+        }
+    });
+
 });
