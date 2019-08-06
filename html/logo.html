@@ -7,80 +7,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/logoStyle.css">
+    <link rel="stylesheet" href="../css/logo.css">
     <script src="../js/jquery-3.4.1.js"></script>
-    <script src="../js/register.js"></script>
+    <script src="../js/logojs.js"></script>
 </head>
 
 <body>
-    <header id="header">
-        <div class="header">
-            <a class="headerLogo" href="#"></a>
-            <div class="headerLogotitle">欢迎注册</div>
-            <div class="have-account">已有账号?
-                <a href="#">请登录 ></a>
+    <header id="logo">
+        <div class="logo">
+            <div class="logoDiv">
+                <div href="#"><img class="logoImg" src="../img/logo-201305-b.png" alt=""></div>
+            </div>
+            <div class="logoTextImg" href="#"><img src="../img/l-icon.png" alt=""></div>
+            <div class="logoright">
+                <b></b>
+                <a>登陆页面，问卷调查</a>
             </div>
         </div>
     </header>
-    <!-- end -->
-    <div class="container w clear">
-        <div class="progress-bar clearfix clear">
-            <div class="pro-step cur-step ">
-                <span class="step-index">1</span>
-                <p class="step-desc">验证手机号</p>
-            </div>
-            <div class="pro-line pro-line1 person-pro-line person-pro-line1 "></div>
-            <div class="pro-step pro-step2 person-pro-step2  ">
-                <span class="step-index">2</span>
-                <p class="step-desc">填写账号信息</p>
-            </div>
-            <div class="pro-line pro-line2 person-pro-line person-pro-line2 "></div>
-            <div class="pro-step pro-step3 person-pro-step3  ">
-                <span class="step-index">3</span>
-                <p class="step-desc">注册成功</p>
+    <div class="tips-wrapper">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版 <a href="#">《京东隐私政策》</a> 已上线，将更有利于保护您的个人隐私。</div>
+    <main id="main">
+        <div class="main">
+            <div class="userlogo">
+                <div class="tips">京东不会以任何理由要求您转账汇款，谨防诈骗。</div>
+                <div class="login-tab">
+                    <div class="login-tab-left">
+                        <a href="#">扫码登录</a>
+                        <span class="border"></span>
+                    </div>
+                    <div class="login-tab-right">
+                        <a href="#">账户登录</a>
+                    </div>
+                </div>
+                <div class="klkl">
+                    <div class="username1 name">
+                        <div class="usertoux"></div>
+                        <input type="text" class="usertxt" placeholder="邮箱/用户名/已验证手机">
+                    </div>
+                    <div class="username1 pasword">
+                        <div class="usertoux"></div>
+                        <input type="text" class="usertxt" placeholder="密码">
+                    </div>
+                    <div class="safew">
+                        忘记密码
+                    </div>
+                    <div class="logo-btn">登     &nbsp;&nbsp;    陆</div>
+                    <div class="register">
+                        <a href="#"><b>立即注册</b></a>   
+                    </div>
+                    <div class="msg-err">
+                            账户名与密码不匹配，请重新输入
+                            如需海外手机登录请添加 国际区号
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- 手机验证 -->
-        <div class="main clear">
-            <div class="iphoneText">
-                <div class="iphoneCountry">中国 0086</div>
-                <input class="iphone2" type="phone" placeholder="建议使用常用手机号">
-                <span class="green">验证通过,请您输入验证码</span>
-                <span class="red">手机号不正确 请重新输入</span>
-            </div>
-            <input type="button" value="点击按钮进行验证" class="iphoneBtn">
-            <div class="codeText">
-                <div class="codeTextLeft">手机验证码</div>
-                <input type="text" class="codeTextword" placeholder="输入验证码">
-                <input type="button" value="点击获取" class="receive">
-            </div>
-            <input type="button" value="下一步" class="nextBtn">
-        </div>
-        <!-- 用户名邮箱 -->
-        <div class="main2 clear">
-            <div class="username oBox">
-                <div class="oBoxdiv person">用 户 名</div>
-                <input type="text" class="oBoxtext usernameText" placeholder="您的账户名和登录名">
-                <span class="usernamedef def">支持中文、英文、数字、“-”、“_”的组合，4-20个字符</span>
-            </div>
-            <div class="userPassword oBox">
-                <div class="oBoxdiv userPassworddiv">设 置 密 码</div>
-                <input type="text" class="oBoxtext userPasswordtext" placeholder="建议使用两种或两种以上字符组合">
-                <span class="userPassworddef def">建议使用字母、数字和符号两种及以上的组合，6-20个字符</span>
-            </div>
-            <div class="userPassword2 oBox">
-                <div class="oBoxdiv userPassword2div">确 认 密 码</div>
-                <input type="text" class="oBoxtext userPassword2text" placeholder="请再次输入密码">
-                <span class="userPassword2def def">请再次输入密码</span>
-            </div>
-            <div class="useremail oBox">
-                <div class="oBoxdiv useremaildiv">邮  箱  验  证</div>
-                <input type="text" class="oBoxtext useremailtext" placeholder="请输入邮箱">
-                <span class="useremaildef def">验证完成后，你可以使用该邮箱登陆</span>
-            </div>
-                <input type="button" class="oBtn oBox" value="立即注册">
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>

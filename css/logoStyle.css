@@ -51,7 +51,6 @@
 }
 .progress-bar .cur-step .step-index {
     background-position: 0 -200px;
-    color: #fff;
 }
 
 .progress-bar .pro-step .step-index {
@@ -63,7 +62,6 @@
     background-position: -45px -200px;
     font-size: 12px;
     font-weight: 700;
-    color: #ccc;
 }
 .progress-bar .cur-step .step-desc {
     color: #3b4;

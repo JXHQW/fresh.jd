@@ -99,6 +99,8 @@ $(function () {
             alert("验证码错误 请重新输入")
         } else {
             // 否则跳转到哪里
+            $(".cur-step .step-desc").css("color","#999");
+            $(".pro-step2 .step-desc").css("color","#3b4");
             $(".main").css("display","none");
             $(".main2").css("display","block")
         }
@@ -202,7 +204,6 @@ $(function () {
         
         if(boan1 && boan2 && boan3 && boan4)
         {
-            // console.log(elementtxt1,passwodtxt1,usernametxt1,iphonetxt1);
             
             $.ajax({
                 type: "post",
@@ -210,12 +211,12 @@ $(function () {
                 data:`username=${usernametxt1}&password=${passwodtxt1}&phone=${iphonetxt1}&element=${elementtxt1}`,
                 success: function(response) {
                     console.log("213131231",response);
+                    window.location.href = "http://localhost:8888/fresh.jd/fresh.jd/html/logo.html"
                 }
             });
-            
         }else{
-            console.log("失败")
-        }
+            console.log("失败");
+        };
     });    
    
 })

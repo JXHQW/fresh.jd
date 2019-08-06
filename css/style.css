@@ -266,6 +266,7 @@
  }
  
  .fresh_fs_menu_item {
+    transition: color .25s ease-in-out;
      position: relative;
      float: left;
      padding: 0 27px;
@@ -274,7 +275,15 @@
      font-size: 14px;
      color: #222;
  }
- 
+ .fresh_fs_menu_item:hover{
+    color: #00c65d;
+ }
+ .fresh_fs_nav .tab_head_item .item_children_item:hover{
+     color: #00c65d;
+ }
+ .fresh_fs_nav_cate .cate_con_lk:hover{
+     color: #00c65d;
+ }
  .fresh_fs_menu_item:after {
      content: "";
      position: absolute;
@@ -1627,6 +1636,10 @@
     border-radius: 15px;
     overflow: hidden;
 }
+.fresh_category_keys_item:hover{
+    color: #fff;
+    background: rgba(247,247,251,.4);
+}
 .fresh_category_more {
     position: relative;
     display: block;
@@ -1694,6 +1707,9 @@
     text-overflow: ellipsis;
     font-weight: lighter;
     transition: color .25s ease-in-out;
+}
+.fresh_category_goods .goods_item_name:hover{
+    color: #00c65d;
 }
 /* 商品价格 */
 .fresh_category_goods .goods_item_price {

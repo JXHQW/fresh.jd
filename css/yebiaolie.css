@@ -1,0 +1,195 @@
+.f-line{
+    width: 1200px;
+    height: 38px;
+    background: #f1f1f1;
+    padding: 6px 8px;
+    border-bottom: 1px solid #e7e3e7;
+}
+.f-sort{
+    width: 320px;
+    height: 25px;
+}
+.f-sort a{
+    float: left;
+    padding: 0 9px;
+    height: 24px;
+    border: 1px solid #CCC;
+    line-height: 24px;
+    margin-right: -1px;
+    background: #FFF;
+    color: #333;
+    margin-right: 1px;
+}
+.f-sort .fs-down{
+    display: inline-block;
+    width: 7px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+.f-sort .arrow {
+    height: 11px;
+    margin-top: 6px;
+    float: left;
+    width: 7px;
+    overflow: hidden;
+    background: url(../img/sprite-arrow.png) no-repeat 0 -100px;
+}
+.f-sort .redbackground{
+    border-color: #e4393c;
+    background: #e4393c;
+    color: #FFF;
+}
+.f-sort a:hover{
+    border: 1px solid #e4393c;
+    color: #e4393c;
+}
+/* 页表 */
+.gl-warp{
+    width: 1200px;
+}
+.gl-warp .gl-item{
+    width: 240px;
+    height: 474px;
+    float: left;
+    margin-top: 10px;
+    border: 1px solid #fff;
+}
+.gl-warp .gl-item:hover{
+    border: 1px solid rgb(231, 225, 225);
+}
+.gl-i-wrap{
+    width: 220px;
+    padding: 38px 9px 10px;
+}
+.p-img a{
+    display: block;
+
+}
+.p-img{
+    width: 220px;
+    height: 220px;
+    margin-bottom: 15px;
+}
+.p-price{
+    width: 220px;
+    height: 22px;
+    margin-bottom: 10px;
+    color: #e4393c;
+    font-size: 20px;
+}
+.p-name{
+    cursor: pointer;
+    height: 40px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.p-name .p-tag{
+    float: left;
+    height: 16px;
+    padding: 0 3px;
+    margin-top: 2px;
+    margin-right: 3px;
+    overflow: hidden;
+    color: #fff;
+    font: 12px/16px "Helvetica Neue","Hiragino Sans GB",SimSun,serif;
+    background: #838dc7;
+    border-radius: 2px;
+    background-color: #c81623;
+}
+.p-name .skcolor_ljg{
+    color: #e4393c;
+}
+.p-name:hover{
+    color: #e4393c;
+}
+/* 评价 */
+.p-commit{
+    width: 100%;
+    height: 18px;
+    margin-top: -3px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+.p-commit strong{
+    color: #a7a7a7;
+    font-weight: 400;
+}
+.p-commit .J_comment{
+    color: #646fb0;
+    font-family: verdana;
+    font-weight: 700;
+}
+.gl-i-wrap .p-shop{
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    margin-top: -3px;
+    margin-bottom: 9px;
+}
+.p-shop .J_im_icon{
+    display: inline-block;
+    position: relative;
+    height: 18px;
+}
+.p-shop .hd-shopname {
+    display: inline-block;
+    max-width: 122px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999;
+}
+
+
+/* 自营 */
+.p-icons{
+    overflow: hidden;
+    zoom: 1;
+    height: 16px;
+    margin-bottom: 12px;
+}
+.goods-icons, .goods-icons2, .goods-icons3,.goods-icons4 {
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 3px;
+    margin-right: 3px;
+    overflow: hidden;
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    font-family: "Helvetica Neue","Hiragino Sans GB",SimSun,serif;
+    background: #e23a3a;
+    color: #FFF;
+    cursor: default;
+    border-radius: 2px;
+}
+/* 购物车 */
+.p-operate{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.addcart{
+    float: right;
+    width: 96px;
+    text-align: center;
+    color: #e4393c;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #DDD;
+    padding: 0 3px 0 24px;
+    position: relative;
+    background: #fff;
+}
+.p-operate .addcart i{
+    position: absolute;
+    display: block;
+    font-style: normal;
+    left: 4px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/search.ele.png) no-repeat 9999px 9999px;
+    transition: background-position .15s ease-in-out;
+    background-position: 0 -272px;
+}
