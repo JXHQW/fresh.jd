@@ -29,5 +29,5 @@ if(mysqli_num_rows($result) == "0")
       echo "恭喜你终于登录成功了";
     }
   };
-//   echo json_encode($data, true);
+  echo json_encode($data, true);
 ?>
