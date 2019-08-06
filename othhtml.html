@@ -10,23 +10,86 @@
 </head>
 
 <body>
-    <li class="item">
-        <div class="item_title">购物指南</div>
-        <div class="item_body"><a class="item_body_item " href="//help.jd.com/user/issue/list-29.html" target="_blank"
-                clstag="channel|keycount|fresh|modFootGuideItems_1_1">购物流程</a><a class="item_body_item "
-                href="//help.jd.com/user/issue/231-258.html" target="_blank"
-                clstag="channel|keycount|fresh|modFootGuideItems_1_2">支付方式</a><a class="item_body_item "
-                href="//help.jd.com/user/issue/325-931.html" target="_blank"
-                clstag="channel|keycount|fresh|modFootGuideItems_1_3">售后规则</a></div>
-    </li>
+    <div class="gl-i-wrap">
+        <div class="p-img">
+            <a target="_blank" title="【格力高吃货大牌】刘昊然来陪你过七夕啦~礼盒抢券更多优惠，满299减60！！立即抢购》"
+                href="//item.jd.com/100000268199.html" onclick="searchlog(1,100000268199,0,2,'','flagsClk=1094718088')">
+                <img width="220" height="220" class="" data-img="1" source-data-lazy-img="" data-lazy-img="done"
+                    src="//img14.360buyimg.com/n7/jfs/t1/64688/34/584/152509/5cecd3d6Ed11129fc/b350466acd069b48.jpg">
+            </a>
+            <div id="belt" class="p-act-sign J_belt_box sign-2017083101"
+                style="background-image: url('https://img30.360buyimg.com/jgsq-productsoa/jfs/t16951/182/417192066/4728/322919ee/5a754dd7N2f64533f.png');">
+                <div class="sign-title ac">京东超市2件7.7折
+                    <span class="sign-date">(8.1-8.7)</span>
+                </div>
+            </div>
+            <div data-lease="" data-catid="13790" data-venid="1000091805" data-presale="" data-done="1"></div>
+        </div>
+        <div class="p-price">
+            <strong class="J_100000268199" data-done="1"><em>￥</em><i>9.90</i></strong> </div>
+        <div class="p-name p-name-type-2">
+            <a target="_blank" title="【格力高吃货大牌】刘昊然来陪你过七夕啦~礼盒抢券更多优惠，满299减60！！立即抢购》"
+                href="//item.jd.com/100000268199.html" onclick="searchlog(1,100000268199,0,1,'','flagsClk=1094718088')">
+                <em><span class="p-tag" style="background-color:#c81623">京东超市</span>人民食品 西米 杂粮 西米露奶茶甜点<font
+                        class="skcolor_ljg">水果</font>捞椰浆原料340g</em>
+                <i class="promo-words" id="J_AD_100000268199">【格力高吃货大牌】刘昊然来陪你过七夕啦~礼盒抢券更多优惠，满299减60！！立即抢购》</i>
+            </a>
+        </div>
+        <div class="p-commit" data-done="1">
+            <strong><a id="J_comment_100000268199" target="_blank" href="//item.jd.com/100000268199.html#comment"
+                    onclick="searchlog(1,100000268199,0,3,'','flagsClk=1094718088')">4700+</a>条评价</strong>
+        </div>
+        <div class="p-shop" data-selfware="1" data-score="5" data-reputation="98" data-done="1">
+            <span class="J_im_icon"><a target="_blank" class="curr-shop hd-shopname"
+                    onclick="searchlog(1,1000091805,0,58)" href="//mall.jd.com/index-1000091805.html"
+                    title="人民食品京东自营旗舰店">人民食品京东自营旗舰店</a></span> </div>
+        <div class="p-icons" id="J_pro_100000268199" data-done="1">
+            <i class="goods-icons J-picon-tips J-picon-fix" data-idx="1" data-tips="京东自营，品质保障">自营</i>
+            <i class="goods-icons4 J-picon-tips" data-tips="本商品参与满减促销">49选5件</i> </div>
+        <div class="p-operate">
+            <a class="p-o-btn contrast J_contrast" data-sku="100000268199" href="javascript:;"
+                onclick="searchlog(1,100000268199,0,6,'','flagsClk=1094718088')"><i></i>对比</a>
+            <a class="p-o-btn focus J_focus" data-sku="100000268199" href="javascript:;"
+                onclick="searchlog(1,100000268199,0,5,'','flagsClk=1094718088')"><i></i>关注</a>
+            <a class="p-o-btn addcart" href="//cart.jd.com/gate.action?pid=100000268199&amp;pcount=1&amp;ptype=1"
+                target="_blank" onclick="searchlog(1,100000268199,0,4,'','flagsClk=1094718088')"
+                data-limit="0"><i></i>加入购物车</a>
+        </div>
+    </div>
 </body>
 <script>
-    var arr6= [];
-    $(".item").each(function (index, item) {
+    var arr = [];
+    $(".gl-item .gl-i-wrap").each(function (index, item) {
         var o = {};
-        o.title = $(item).find(" .item_title").html();
-        o.text = $(item).find(" .item_body_item").text();
-        arr6.push(o);
+        o.commit  = $(item).find(".p-commit a").text();
+
+        o.src  = $(item).find(".p-img img")[0].src;
+        o.price = $(item).find(".p-price i").html();
+        o.tag  = $(item).find(".p-name span").html();
+
+        o.ljg = $(item).find(".p-name .skcolor_ljg").html();
+
+        o.title = $(item).find(".p-name em").text();
+        
+
+        o.shop  = $(item).find(".p-shop a").html();
+
+        o.icons = $(item).find(".p-icons i").html();
+
+        arr.push(o);
+    })
+    var arr = [];
+    $(".gl-item .gl-i-wrap").each(function (index, item) {
+        var o = {};
+
+        o.tag  = $(item).find(".p-name span").html();
+
+        o.ljg = $(item).find(".p-name .skcolor_ljg").html();
+
+        o.title = $(item).find(".p-name em").text();
+       
+
+        arr.push(o);
     })
 </script>
 
