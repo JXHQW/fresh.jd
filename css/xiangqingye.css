@@ -183,7 +183,6 @@
 .preview-wrap{
     width: 352px;
     float: left;
-    border: 1px solid #000;
 }
 .preview-wrap-img{
     width: 352px;
@@ -196,6 +195,9 @@
 .preview-wrap-img .none{
     display: none;
 }
+.preview-wrap-img .block{
+    display: block;
+}
 .preview-wrap-imgmin{
     width: 352px;
     height: 54px;
@@ -204,6 +206,7 @@
     width: 54px;
     height: 54px;
     float: left;
+    border: 2px solid #fff;
 }
 .preview-wrap-imgmin-item img{
     width: 100%;
@@ -220,7 +223,7 @@
 .sku-name{
     width: 590px;
     height: 38px;
-    border: 1px solid #000;
+    margin-bottom: 5px;
     padding-top: 8px;
     font: 700 16px Arial,"microsoft yahei";
 }
@@ -238,4 +241,165 @@
     color: #fff;
     cursor: pointer;
     font-size: 12px;
+}
+.news{
+    height: 18px;
+    padding-left: 11px;
+    color: #e53e41;
+}
+.news a{
+    text-decoration: underline;
+    color: #5e69ad;
+}
+.summary{
+    padding-top: 10px;
+    position: relative;
+    padding-bottom: 5px;
+    background: #f3f3f3;
+}
+.summary .summary-price{
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.jdj{
+    float: left;
+    line-height: 22px;
+    padding-left: 10px;
+    color: #999999;
+    width: 54px;
+    height: 22px;
+}
+.summary-price .jdj_price{
+    margin-left: 70px;
+    font-size: 22px;
+    color: #E4393C;
+}
+.summary-price a{
+    color: #5e69ad;
+    font-size: 12px;
+    vertical-align: 2px;
+    margin-left: 10px;
+}
+.summary1{
+    height: 31px;
+}
+.item-border{
+    color: #df3033;
+    background: 0 0;
+    border: 1px solid #df3033;
+    padding: 2px 3px;
+    margin-right: 5px;
+    display: inline-block;
+    line-height: 16px;
+    margin-left: 20px;
+}
+.summary1-item{
+    display: inline-block;
+}
+.item-hl{
+    color: #666;
+    line-height: 18px;
+    display: inline-block;
+}
+.pickOneTip{
+    font-size: 12px;
+    color: #999999;
+    margin-left: 80px;
+}
+.sprite-tips{
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: -3px;
+    width: 11px;
+    height: 15px;
+    background-image: url(../img/__sprite.png);
+    background-position: -16px -20px;
+}
+.summary-stock-left{
+    float: left;
+    padding-left: 10px;
+    font-family: simsun;
+    color: #999;
+}
+.summary-stock-right{
+    margin-left: 70px;
+}
+.summary-stock-right ul li{
+    margin-right: 5px;
+    float: left;
+    font-size: 12px;
+    color: #646FB0;
+}
+.summary-stock2{
+    line-height: 32px;
+    height: 32px;
+    margin-left: 70px;
+}
+.summary-stock2 span{
+    color: #E4393C;
+}
+.summary-stock3{
+    border-bottom: 1px solid #999;
+    margin-bottom: 2px;
+    margin-top: 20px;
+}
+.kg{
+    margin-left: 70px;
+    color: #999;
+    height: 22px;
+    line-height: 22px;
+}
+.choose-amount{
+    width: 58px;
+    height: 44px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-right: 10px;
+    float: left;
+    margin-top: 30px;
+}
+.choose-amount .buy-num{
+    display: block;
+    width: 43px;
+    height: 42px;
+    line-height: 42px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border: none;
+    border: 0;
+    text-align: center;
+}
+.choose-amount a{
+    display: block;
+    width: 15px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    background: #f1f1f1;
+    color: #666;
+    position: absolute;
+    right: -1px;
+    border: 1px solid #ccc;
+}
+.btn-reduce{
+    color: #ccc;
+    cursor: not-allowed;
+    bottom: -1px;
+}
+.InitCartUrl{
+    width: 142px;
+    height: 46px;
+    background: #df3033;
+    font-weight: 700;
+    color: #fff;
+    float: left;
+    line-height: 46px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 29px;
+    cursor: pointer;
 }
