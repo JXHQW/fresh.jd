@@ -1,0 +1,241 @@
+#user {
+    width: 100%;
+    height: 30px;
+    background: #e3e4e5;
+}
+
+#user .w ul li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    position: relative;
+}
+
+.dorpdown {
+    margin-left: 10px;
+}
+
+#user .w .fr .spacer {
+    width: 1px;
+    height: 12px;
+    margin-top: 9px;
+    padding: 0;
+    background: #ccc;
+    overflow: hidden;
+}
+
+#user #ttbar-login {
+    margin-right: 10px;
+}
+
+#ttbar-login a:nth-child(2) {
+    color: red;
+}
+
+.iconfont {
+    margin-left: 10px;
+    float: right;
+    line-height: 43px;
+    font-size: 18px;
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+#user .w .fl .home {
+    padding: 0px;
+    width: 73px;
+    height: 30px;
+}
+
+.imgHouse {
+    margin-bottom: 4px;
+    width: 21px;
+    height: 22px;
+}
+
+#user .w ul li a:hover {
+    color: red;
+}
+
+.dorpdown-layer {
+    border: 1px solid #ddd;
+    position: absolute;
+    left: -1px;
+    width: 280px;
+    background: #ffffff;
+    display: none;
+}
+
+.my-jd:hover {
+    background: #ffffff;
+}
+
+.my-jd:hover .dorpdown-layer {
+    display: block;
+}
+
+.myjdlist1 {
+    width: 280px;
+    height: 82px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.myjdlist1>div {
+    width: 126px;
+    height: 72px;
+    float: left;
+}
+
+.item {
+    height: 24px;
+    margin-left: 10px;
+}
+
+.myjdlist2 {
+    width: 280px;
+    height: 59px;
+}
+
+.myjdlist2>div {
+    width: 126px;
+    height: 72px;
+    float: left;
+}
+.Img{
+    width: 100%;
+}
+.Img img{
+    width: 100%;
+    height: 110px;
+}
+
+.crumb-wrap {
+    background: #f2f2f2;
+    clear: both;
+}
+.w{
+    width: 1210px;
+    height: 44px;
+}
+.crumb{
+    width: 487px;
+    height: 44px;
+    float: left;
+}
+.curm_list{
+    width: 487px;
+    height: 44px;
+}
+.curm_list .curm_list_item{
+    cursor: pointer;
+    margin-top: 13px;
+    height: 18px;
+    float: left;
+    margin-right: 10px;
+}
+.curm_list .curm_list_item:hover{
+    color: red;
+}
+.crumb  .curm_list_item2{
+    margin-right: 10px;
+    cursor: pointer;
+    float: left;
+    width: 62px;
+    height: 22px;
+    background: #fff;
+    border: 1px solid #ccc;
+    line-height: 22px;
+    margin-top: 10px;
+}
+.crumb  .curm_list_item2 a{
+    margin-left: 3px;
+}
+.curm_list_item2 .arr-close{
+    /* float: right;
+    width: 13px;
+    height: 7px;
+    background: #000000;
+    background: url(../img/arr-close.png);
+ */
+
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 7px;
+    margin: 0 10px 0 5px;
+    background: url(../img/arr-close.png) no-repeat;
+    transition: .2s ease;
+    margin-bottom: 5px;
+    /* -webkit-transition: .2s ease; */
+}
+.curm_list_item2:hover .arr-close{
+    -webkit-transform:rotate(180deg);
+
+}
+.main{
+    width: 1210px;
+    margin: auto;
+}
+.preview-wrap{
+    width: 352px;
+    float: left;
+    border: 1px solid #000;
+}
+.preview-wrap-img{
+    width: 352px;
+    height: 352px;
+    overflow: hidden;
+}
+.preview-wrap-item{
+    overflow: hidden;
+}
+.preview-wrap-img .none{
+    display: none;
+}
+.preview-wrap-imgmin{
+    width: 352px;
+    height: 54px;
+}
+.preview-wrap-imgmin-item{
+    width: 54px;
+    height: 54px;
+    float: left;
+}
+.preview-wrap-imgmin-item img{
+    width: 100%;
+    height: 100%;
+}
+.bordermin{
+    border: 2px solid #e53e41;
+}
+.itemInfo-wrap{
+    width: 590px;
+    float: left;
+    margin-left: 30px;
+}
+.sku-name{
+    width: 590px;
+    height: 38px;
+    border: 1px solid #000;
+    padding-top: 8px;
+    font: 700 16px Arial,"microsoft yahei";
+}
+.sku-name div{
+    float: left;
+    margin: 0 10px;
+    width: 58px;
+    height: 16px;
+    background: #e53e41;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 2px;
+}
+.sku-name div a{
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}

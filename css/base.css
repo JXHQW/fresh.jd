@@ -128,3 +128,11 @@ body {
 .hide {
 	display: none
 }
+.clear::after {
+	content: " ";
+	height: 0;
+	display: block;
+	overflow: hidden;
+	clear: both;
+	visibility: hidden;
+}

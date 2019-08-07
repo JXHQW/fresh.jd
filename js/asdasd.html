@@ -10,14 +10,12 @@
     <input class="Obtn" type="button" value="asdasd">
 </head>
 <body>
-    
+        <i name='i1'>x</i>
+        <i>y</i>
     <script>
         $(function(){
-            var numCode = parseInt(Math.random() * 10000);
-            $(".Obtn").click(function(){
-                console.log(numCode);
-                
-            })
+            console.log($("i[name='i1']"));
+            
         })
     </script>
 </body>
