@@ -4,7 +4,6 @@ $(function(){
         if($(this).is(':checked'))
         {
             $(".cart-item-check input").attr("checked",true);
-            
         }else{
             $(".cart-item-check input").attr("checked",false);
         }
@@ -25,8 +24,5 @@ $(function(){
             $(".itxt-num").val(txtNum);
             $(".decrement").css("cursor","pointer");
          }
-       
-        
-        
     });
 })
