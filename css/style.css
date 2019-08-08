@@ -61,6 +61,7 @@
  
  .dorpdown-layer {
      border: 1px solid #ddd;
+     z-index: 1;
      position: absolute;
      left: -1px;
      width: 280px;
@@ -882,9 +883,9 @@
  .fresh_top100 {
      position: relative;
      z-index: 2;
-     margin-bottom: 10px;
-     height: 584px;
+     margin-bottom: 30px;
      background: #fff url(../img/taohuabackground.jpg) center 0 no-repeat;
+     padding-bottom: 1px;
  }
  
  .fresh_top100_head {
@@ -918,7 +919,7 @@
  }
  
  .fresh_top100_goods {
-     margin-bottom: 9px;
+     margin-bottom: 20px;
      padding-left: 20px;
  }
  
@@ -1889,4 +1890,8 @@
 }
 .mod_footer_list_body_item:hover{
     color: #fff;
+}
+.J_floorBox{
+    width: 100%;
+    background: #f7f7f9;
 }

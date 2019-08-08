@@ -1,0 +1,348 @@
+#user {
+    width: 100%;
+    height: 30px;
+    background: #e3e4e5;
+}
+
+#user .w ul li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    position: relative;
+}
+
+.dorpdown {
+    margin-left: 10px;
+}
+
+#user .w .fr .spacer {
+    width: 1px;
+    height: 12px;
+    margin-top: 9px;
+    padding: 0;
+    background: #ccc;
+    overflow: hidden;
+}
+
+#user #ttbar-login {
+    margin-right: 10px;
+}
+
+#ttbar-login a:nth-child(2) {
+    color: red;
+}
+
+.iconfont {
+    margin-left: 10px;
+    float: right;
+    line-height: 43px;
+    font-size: 18px;
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+#user .w .fl .home {
+    padding: 0px;
+    width: 73px;
+    height: 30px;
+}
+
+.imgHouse {
+    margin-bottom: 4px;
+    width: 21px;
+    height: 22px;
+}
+
+#user .w ul li a:hover {
+    color: red;
+}
+
+.dorpdown-layer {
+    border: 1px solid #ddd;
+    z-index: 1;
+    position: absolute;
+    left: -1px;
+    width: 280px;
+    background: #ffffff;
+    display: none;
+}
+
+.my-jd:hover {
+    background: #ffffff;
+}
+
+.my-jd:hover .dorpdown-layer {
+    display: block;
+}
+
+.myjdlist1 {
+    width: 280px;
+    height: 82px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.myjdlist1>div {
+    width: 126px;
+    height: 72px;
+    float: left;
+}
+
+.item {
+    height: 24px;
+    margin-left: 10px;
+}
+
+.myjdlist2 {
+    width: 280px;
+    height: 59px;
+}
+
+.myjdlist2>div {
+    width: 126px;
+    height: 72px;
+    float: left;
+}
+#header{
+    width: 100%;
+}
+.header{
+    width: 990px;
+    height: 97px;
+    padding: 0 10px;
+    margin: auto;
+    border-bottom: 1px solid #999;
+}
+.header .logo{
+    position: relative;
+    z-index: 12;
+    float: left;
+    width: 276px;
+    height: 50px;
+    margin: 15px 0 22px;
+    width: 277px;
+    padding: 0;
+}
+.logo-left{
+    display: block;
+    margin-top: 2px;
+    width: 134px;
+    height: 42px;
+    background: url(../img/jdlogo-201708-@2x.png) no-repeat 0 0;
+    background-size: 134px 42px;
+}
+.logo-right b{
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    line-height: 99em;
+    top: 0px;
+    right: 0;
+    background: url(../img/cart-icon.png) #fff no-repeat;
+    
+}
+.logo-right{
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    line-height: 99em;
+    top: 14px;
+    right: 38px;
+    background: #fff;
+}
+.cart-search{
+    float: right;
+    border: 2px solid #c91623;
+    height: 24px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.itxt{
+    border: 0;
+    height: 18px;
+    line-height: 18px;
+    width: 260px;
+    padding: 3px 5px;
+    outline: 0;
+}
+.button{
+    display: inline-block;
+    vertical-align: top;
+    width: 48px;
+    height: 24px;
+    background: #c91623;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+.cart-filter-bar{
+    width: 990px;
+    height: 37px;
+    margin: auto;
+}
+.cart-filter-bar div{
+    width: 79px;
+    height: 37px;
+    border-bottom: 1px solid #e2231a;
+    line-height: 36px;
+}
+.cart-filter-bar div a{
+    color: #e2231a;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 2px;
+    float: left;
+}
+.cart-filter-bar div span{
+    color: #e2231a;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 2px;
+    float: left;
+}
+#jd-cart{
+    width: 990px;
+    margin: auto;
+}
+.cart-head{
+    height: 43px;
+    background: #f3f3f3;
+    line-height: 43px;
+    margin-bottom: 10px;
+}
+.t-checkbox{
+    margin-left: 10px;
+    margin-right: 40px;
+}
+.cart-head .column{
+    float: left;
+}
+.toggle-checkboxes_up{
+    margin-right: 5px;
+}
+.t-goods{
+    margin-left: 90px;
+    width: 208px;
+}
+.t-price{
+    width: 250px;
+}
+.t-price span{
+    float: right;
+}
+.t-quantity{
+    margin-left: 60px;
+}
+.t-sum{
+    margin-left: 90px;
+}
+.t-action{
+    margin-left: 50px;
+}
+.cart-list{
+    width: 990px;
+    margin: auto;
+}
+.cart-item-list{
+    height: 119px;
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    border-color: #aaa #f1f1f1 #f1f1f1;
+    background: #fff;
+}
+.cart-item-check{
+    width: 30px;
+    height: 43px;
+    float: left;
+    margin: 30px 20px 0 20px;
+}
+.p-goods{
+    width: 300px;
+    height: 107px;
+    float: left;
+    padding-top: 20px;
+}
+.p-goods .p-img{
+    width: 82px;
+    height: 82px;
+    float: left;
+    cursor: pointer;
+}
+.p-goods .p-img img{
+    width: 100%;
+    height: 100%;
+}
+.p-goods .item-msg{
+    float: left;
+    width: 208px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.item-msg:hover{
+    color: #c91623;
+}
+.p-price-new{
+    float: left;
+    width: 175px;
+    height: 90px;
+    margin-left: 100px;
+    padding-top: 30px;
+    text-align: right;
+}
+.p-quantity{
+    width: 82px;
+    float: left;
+    height: 67px;
+    margin-left: 40px;
+    padding-top: 30px;
+}
+.quantity-form{
+    height: 22px;
+    border: 1px solid #cacbcb;
+    width: 82px;
+}
+.decrement{
+    text-align: center;
+    width: 17px;
+    float: left;
+    border-right: 1px solid #cacbcb;
+    height: 22px;
+    cursor: pointer;
+}
+.itxt-num{
+    width: 46px;
+    height: 20px;
+    float: left;
+    text-align: center;
+}
+.increment{
+    text-align: center;
+    cursor: pointer;
+    width: 17px;
+    float: left;
+    border-left: 1px solid #cacbcb;
+    height: 22px;
+}
+.p-sum{
+    float: left;
+    padding-top: 32px;
+    margin-left: 40px;
+    margin-right: 36px;
+    color: #333;
+    font-weight: 700;
+}
+.cart-remove{
+    float: left;
+    color: #666;
+    padding-top:32px;
+    cursor: pointer;
+}
