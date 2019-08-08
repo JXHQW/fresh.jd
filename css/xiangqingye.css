@@ -154,14 +154,6 @@
     margin-left: 3px;
 }
 .curm_list_item2 .arr-close{
-    /* float: right;
-    width: 13px;
-    height: 7px;
-    background: #000000;
-    background: url(../img/arr-close.png);
- */
-
-
     display: inline-block;
     vertical-align: middle;
     width: 13px;
@@ -252,6 +244,7 @@
     color: #5e69ad;
 }
 .summary{
+    margin: 10px 0px;
     padding-top: 10px;
     position: relative;
     padding-bottom: 5px;
@@ -340,9 +333,12 @@
     color: #E4393C;
 }
 .summary-stock3{
-    border-bottom: 1px solid #999;
     margin-bottom: 2px;
     margin-top: 20px;
+}
+.summary-stock4{
+    border-bottom: 1px solid #999;
+    margin: 10px 0px;
 }
 .kg{
     margin-left: 70px;

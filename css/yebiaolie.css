@@ -26,6 +26,14 @@
     margin-left: 5px;
     vertical-align: top;
 }
+.f-sort .curr3 .fs-down{
+    display: inline-block;
+    width: 7px;
+    margin-left: 5px;
+    vertical-align: bottom;
+    -webkit-transform: rotate(180deg);
+    margin-bottom: 2px;
+}
 .f-sort .arrow {
     height: 11px;
     margin-top: 6px;
@@ -41,7 +49,6 @@
 }
 .f-sort a:hover{
     border: 1px solid #e4393c;
-    color: #e4393c;
 }
 /* 页表 */
 .gl-warp{
@@ -166,6 +173,12 @@
 .p-operate{
     overflow: hidden;
     margin-bottom: 10px;
+    width: 97px;
+    float: right;
+    border: 1px solid #ddd;
+}
+.p-operate:hover{
+    border: 1px solid #e23a3a;
 }
 .addcart{
     float: right;
@@ -174,7 +187,6 @@
     color: #e4393c;
     height: 25px;
     line-height: 25px;
-    border: 1px solid #DDD;
     padding: 0 3px 0 24px;
     position: relative;
     background: #fff;

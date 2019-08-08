@@ -1,10 +1,10 @@
 $(function () {
-    
-    let getList = () => {
+    let orderType = 0;
+    let getList = (page) => {
         $.ajax({
             type: "post",
             url: "../src/ceshi.php",
-            data: "page=0",
+            data: `page=${page}&orderType=${orderType}`,
             dataType: "json",
             success: function(response) {
                 console.log(response);
@@ -52,7 +52,7 @@ $(function () {
             }
         });
     };
-    getList();
+    getList(0);
 
 
 
@@ -74,8 +74,28 @@ $(function () {
     $(".page").on("click","a",function(){
         var index = $(this).index();
         $(this).addClass("active").siblings().removeClass("active");
-    })
+        getList(index);
+    });
 
+    // 排序
+    $(".f-sort").on("click","a",function(){
+        $(this).addClass("redbackground").siblings().removeClass("redbackground");
+        let index = $(this).index();
+        orderType = index;
+        getList(0);
+        
+        // $.ajax({
+        //     type: "post",
+        //     url: "../src/ceshi.php",
+        //     data: "page=3",
+        //     dataType: "json",
+        //     success: function(response){
+        //         response.data.map((item)=>{
+        //             console.log(item.commit);
+        //         })
+        //     }
+        // })
+    });
 
 
 });
