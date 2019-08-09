@@ -1,5 +1,7 @@
 $(function () {
 
+//    let name33 =  COOKIE.getItem(username);
+//    $(".fore1").html(name33);
     $($(".settleup")[1]).hover(() => {
         $(".headerqrcode_qc").stop().fadeIn();
     }, () => {

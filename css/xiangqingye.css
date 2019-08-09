@@ -191,6 +191,7 @@
 .preview-wrap{
     width: 352px;
     float: left;
+    position: relative;
 }
 .preview-wrap-img{
     width: 352px;

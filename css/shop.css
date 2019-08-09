@@ -346,3 +346,47 @@
     padding-top:32px;
     cursor: pointer;
 }
+.cart-foot {
+    height: 50px;
+    border: 1px solid #f3f3f3;
+    margin-top: 30px;
+}
+.settlement{
+    height: 52px;
+    width: 94px;
+    background: #c91623;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    float: right;
+    cursor: pointer;
+}
+.totalPrice{
+    width: 150px;
+    float:right;
+    color:#999;
+    padding-top: 10px;
+}
+.totalPrice b{
+    font-size: 16px;
+    color: #E2231A;
+    font-weight: 700;
+}
+.totalPrice span{
+    font-size: 16px;
+    color: #E2231A;
+    font-weight: 700;
+}
+.foot-lf{
+    width: 125px;
+    float:right;
+    color:#999;
+    padding-top: 10px;
+}
+.foot-lf span{
+    font-size: 14px;
+    color: #E2231A;
+    font-weight: 700;
+}

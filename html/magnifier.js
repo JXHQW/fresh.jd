@@ -2,13 +2,13 @@
 
     var fnName = 'magnifier';
     var magnifier = {
-        magnifier: ".preview-wrap", //最外层的大容器
+        magnifier: ".magnifier", //最外层的大容器
 
-        container: ".preview-wrap-img", //选择当前主图的承载容器
+        container: ".magnifier-container", //选择当前主图的承载容器
 
-        containerImg: '.preview-wrap-item', //图片的容器
+        containerImg: '.images-cover', //图片的容器
 
-        view: ".czrq", //图片放大后承载容器
+        view: ".magnifier-view", //图片放大后承载容器
 
         width: 400, //图片放大后承载容器宽度
 
@@ -20,9 +20,9 @@
 
         zoom: 4, //缩放比例
 
-        thumbnail: ".preview-wrap-imgmin > div", //缩略图容器
+        thumbnail: ".magnifier-line > ul", //缩略图容器
 
-        assembly: ".preview-wrap-imgmin > div", //按钮组
+        assembly: ".magnifier-btn", //按钮组
 
         index: 0 //当前图片的索引
     };

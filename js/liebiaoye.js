@@ -61,7 +61,7 @@ $(function () {
             url: "../src/list.php",
             dataType: "json",
             success: function (response) {
-                // console.log(response);
+                console.log(response);
                 let pageSize = response.data.count;
                 var res = '';
                 for(var i = 0; i<pageSize;i++){
@@ -84,8 +84,10 @@ $(function () {
         orderType = index;
         getList(0);
     });
-
+    let num = 0;
     $(".gl-warp").on("click",".p-operate",function(){
+        num++
+        $(".gouwuchenum").html(num);
         let item = $(this).parent().parent();
         let index = item.attr("data-index");
         let src   = item.find(".p-img img")[0].src;
@@ -101,6 +103,8 @@ $(function () {
                 console.log(response);
             }
         });
-    })
+    });
+
+
 
 });

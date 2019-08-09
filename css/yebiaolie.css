@@ -239,23 +239,83 @@
     background: #fff;
     color: #c81623
 }
-.settleup {
-    float: left;
-    margin: 42px 0 0 30px;
-    width: 138px;
-    height: 36px;
-    border: 1px solid #dfdfdf;
-    background: #F9F9F9;
-    text-align: center;
-    position: relative;
-    position: fixed;
-    top: 200px;
-    right: 20px;
+
+.auto{
+    margin: auto;
+    width: 1200px;
 }
-.cart {
-    width: 18px;
-    height: 18px;
+.top{
+    height: 100px;
+
+}
+.head{
+    width: 80%;
+    margin: auto;
+}
+.header_logo{
+    margin:  22px;
+    float: left;
+}
+.header_logo img{
+    width: 134px;
+    height: 42px;
+}
+.from-inputs{
+    width: 706px;
+    height: 40px;
+    border: 2px solid #c81623;
+    float: left;
+    margin:30px 0 0 100px;
+    padding-left: 10px;
+}
+.fl{
+    float: left;
+}
+.from_text{
+    width: 500px;
+    height: 35px;
+}
+.from_sousuo{
+    float: right;
+    height: 100%;
+    width: 100px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background: #c81623
+}
+.gouwuche{
+    width: 140px;
+    height: 36px;
+    border: 1px solid #999;
+    float: right;
+    margin-top: 30px;
+    text-align: left;
+    line-height: 36px;
+    color:#e4393c;
+    padding-left: 10px;
+    position: relative;
+}
+.gouwuchetext{
+    float: left;
+}
+.cart-ic {
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.cart-ic img{
+    width: 20px;
+    height: 20px;
+}
+.gouwuchenum{
     position: absolute;
-    top: 8px;
-    left: 11px;
+    top: -11px;
+    right: 27px;
+    font-weight: 700;
 }
