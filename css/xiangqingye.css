@@ -416,3 +416,7 @@
     margin-top: 29px;
     cursor: pointer;
 }
+.preview-wrap-img img{
+    width: 352px;
+    height: 352px;
+}

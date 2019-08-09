@@ -104,7 +104,9 @@ $(function () {
             }
         });
     });
-
-
-
+    $(".gl-warp").on("click",".gl-item",function(){
+       let index = $(this).data("index");
+        Cookie.setItem("gid",index);
+        window.open("http://localhost:8888/fresh.jd/fresh.jd/html/xiangqingye.html");
+    })
 });
