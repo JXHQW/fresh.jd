@@ -9,8 +9,8 @@ $(function () {
             success: function(response) {
                 console.log(response);
                 // [2] 根据数据渲染页面
-                var res = response.data.map(item => {
-                    return `<li class="gl-item">
+                var res = response.data.map((item,idx) => {
+                    return `<li class="gl-item" data-index = ${idx}>
                                 <div class="gl-i-wrap">
                                     <div class="p-img">
                                         <a href="#">
@@ -40,7 +40,7 @@ $(function () {
                                         <i class="goods-icons J-picon-tips J-picon-fix">${item.icons}</i>
                                     </div>
                                     <div class="p-operate">
-                                        <a href="#" class="p-o-btn addcart">
+                                        <a href="javascript:void(0);" class="p-o-btn addcart">
                                             <i></i>
                                             加入购物车
                                         </a>
@@ -83,19 +83,24 @@ $(function () {
         let index = $(this).index();
         orderType = index;
         getList(0);
-        
-        // $.ajax({
-        //     type: "post",
-        //     url: "../src/ceshi.php",
-        //     data: "page=3",
-        //     dataType: "json",
-        //     success: function(response){
-        //         response.data.map((item)=>{
-        //             console.log(item.commit);
-        //         })
-        //     }
-        // })
     });
 
+    $(".gl-warp").on("click",".p-operate",function(){
+        let item = $(this).parent().parent();
+        let index = item.attr("data-index");
+        let src   = item.find(".p-img img")[0].src;
+        let title = item.find(".p-name-type-2").text();
+        let price = item.find(".p-price").text().slice(1) * 1;
+        
+        $.ajax({
+            type: "post",
+            url: "../cart/cart-list.php",
+            data:`index=${index}&src=${src}&title=${title}&price=${price}`,
+            // dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+    })
 
 });

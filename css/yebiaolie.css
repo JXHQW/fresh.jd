@@ -239,3 +239,23 @@
     background: #fff;
     color: #c81623
 }
+.settleup {
+    float: left;
+    margin: 42px 0 0 30px;
+    width: 138px;
+    height: 36px;
+    border: 1px solid #dfdfdf;
+    background: #F9F9F9;
+    text-align: center;
+    position: relative;
+    position: fixed;
+    top: 200px;
+    right: 20px;
+}
+.cart {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 8px;
+    left: 11px;
+}

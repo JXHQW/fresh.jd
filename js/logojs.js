@@ -12,8 +12,7 @@ $.ajax({
     url: "../src/logo.php",
     data:`username=${username}&password=${password}`,
     success: function(response) {
-        console.log("111",response);
-        if(response == "恭喜你终于登录成功了")
+        if(response == "恭喜你，登录成功！")
         {
             // 跳转到首页
             window.location.href = "http://localhost:8888/fresh.jd/fresh.jd/firsh.html"
@@ -22,5 +21,5 @@ $.ajax({
         }
     }
 });
-})
+});
 });

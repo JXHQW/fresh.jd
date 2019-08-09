@@ -1,4 +1,49 @@
 $(function(){
+
+    $.ajax({
+        type: "post",
+        url: "../cart/cart.php",
+        // data:`index=${index}&src=${src}&title=${title}&price=${price}`,
+        dataType: "json",
+        success: function (response) {
+            let html = response.data.map((item,idx)=>{
+                return `
+                        <div class="cart-item-list" data-gid=${item.gid}>
+                            <!-- 单选框 -->
+                            <div class="cart-item-check">
+                                <input type="checkbox">
+                            </div>
+                            <!-- img title -->
+                            <div class="cell p-goods">
+                                <div class="p-img"><img src=${item.src} alt=""></div>
+                                <div class="item-msg">
+                                    <div class="p-name">${item.title}/</div>
+                                </div>
+                            </div>
+                            <!-- 价格 -->
+                            <div class="cell  p-price-new">
+                                ￥<span class="p-price">${item.price}</span>
+                            </div>
+                            <!-- 数量 -->
+                            <div class="cell p-quantity">
+                                <div class="quantity-form">
+                                    <div class="decrement">-</div>
+                                    <input type="text" class="itxt-num" value="1">
+                                    <div class="increment">+</div>
+                                </div>
+                            </div>
+                            <!-- 价格 -->
+                            <div class="cell p-sum">
+                                ￥<span>26.80</span>
+                            </div>
+                            <div class="cart-remove">删除</div>
+                        </div>
+                    `;
+            });
+            $(".cart-list").append(html)
+        }
+    });
+
     // 全选状态
     $(".toggle-checkboxes_up").click(function(){
         if($(this).is(':checked'))
@@ -8,21 +53,23 @@ $(function(){
             $(".cart-item-check input").attr("checked",false);
         }
     });
+    function num() {
+        $.ajax({
+            type: "post",
+            url: "../src/cart.php",
+            data: `num=${num}`,
+            dataType: "json",
+            success: function(response) {
+                console.log(response);
+                
+            }
+        })
+    }
     $(".cart-list").on("click",".increment",function(){
-        
-        let txtNum = $(".itxt-num").val();
-        txtNum++
-        $(".itxt-num").val(txtNum);
-    });
-    $(".cart-list").on("click",".decrement",function(){
-        let txtNum = $(".itxt-num").val();
-        if(txtNum == 1){
-            txtNum = 1;
-            $(".decrement").css("cursor","no-drop");
-         }else{
-            txtNum--
-            $(".itxt-num").val(txtNum);
-            $(".decrement").css("cursor","pointer");
-         }
+        let parent = $(this).parent();
+        let num = parent.find("input").val();
+        num++
+        parent.find("input").val(num);
+        num();
     });
 })

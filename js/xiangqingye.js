@@ -13,8 +13,14 @@ $(function(){
         $($(".preview-wrap-item")[index]).removeClass("none").siblings().addClass("none");
         
     },function(){});
-    $(".preview-wrap-item").mousemove(function(){
-        // enlarge(this);
-    });
+    console.log(111);
     
+    var magnifierConfig = {
+        magnifier: ".preview-wrap", //最外层的大容器
+        width: 400, //承载容器宽
+        height: 400, //承载容器高
+        moveWidth: null, //如果设置了移动盒子的宽度，则不计算缩放比例
+        zoom: 10 //缩放比例
+    };
+    var _magnifier = magnifier(magnifierConfig);
 })

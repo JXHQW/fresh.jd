@@ -152,6 +152,7 @@
     color: #fff;
     text-align: center;
     line-height: 40px;
+    cursor: pointer;
 }
 .register{
     width: 306px;
@@ -164,6 +165,7 @@
     font-size: 14px;
     color: #b61d1d;
     line-height: 50px;
+    cursor: pointer;
 }
 .msg-err{
     display: none;
