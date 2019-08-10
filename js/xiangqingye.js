@@ -18,9 +18,6 @@ $(function () {
                        <img src=${item.src} alt=""></div>
                    </div>
                </div>
-   
-   
-   
                <!-- you -->
                <div class="czrq magnifier-view"></div>
                

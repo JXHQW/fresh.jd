@@ -54,8 +54,6 @@ $(function () {
     };
     getList(0);
 
-
-
     $.ajax({
             type: "post",
             url: "../src/list.php",
@@ -76,7 +74,6 @@ $(function () {
         $(this).addClass("active").siblings().removeClass("active");
         getList(index);
     });
-
     // 排序
     $(".f-sort").on("click","a",function(){
         $(this).addClass("redbackground").siblings().removeClass("redbackground");
@@ -86,10 +83,10 @@ $(function () {
     });
     let num = 0;
     $(".gl-warp").on("click",".p-operate",function(){
-        num++
         $(".gouwuchenum").html(num);
         let item = $(this).parent().parent();
         let index = item.attr("data-index");
+        num++
         let src   = item.find(".p-img img")[0].src;
         let title = item.find(".p-name-type-2").text();
         let price = item.find(".p-price").text().slice(1) * 1;
@@ -104,8 +101,8 @@ $(function () {
             }
         });
     });
-    $(".gl-warp").on("click",".gl-item",function(){
-       let index = $(this).data("index");
+    $(".gl-warp").on("click",".p-img",function(){
+       let index = $(this).parent().parent().data("index");
         Cookie.setItem("gid",index);
         window.open("http://localhost:8888/fresh.jd/fresh.jd/html/xiangqingye.html");
     })
